@@ -1,6 +1,15 @@
 $( document ).ready(function() {
 
     var result = [];
+
+    if (typeof(Storage) !== "undefined") {
+        if(JSON.parse(localStorage.getItem("result"))){
+            result = JSON.parse(localStorage.getItem("result"));
+            paint()
+        } 
+    }
+
+    
  
     $('#add').on("click", function() {
         var name = $('#name');
@@ -13,6 +22,8 @@ $( document ).ready(function() {
             'company' : company.val(),
             'time' : time.val()
         }
+
+        if(person.name === '' || person.company === '' ||  person.time === "") return false;
 
         result.push(person);
         result.sort(function(a, b){
@@ -46,6 +57,8 @@ $( document ).ready(function() {
 
     function paint() {
         $('tbody').empty();
+
+        localStorage.setItem("result", JSON.stringify(result));
 
         result.forEach(function(person, index) {
             addPerson(person.name, person.company, person.time, (index+1));
