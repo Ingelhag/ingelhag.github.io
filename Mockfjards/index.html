@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>Mockfjärds</title>
+		<link rel='stylesheet' href='css/custom.css' type='text/css'>
+		<link rel='stylesheet' href='css/bootstrap.css' type='text/css'>
+		<link rel='stylesheet' href='css/font-awesome.css' type='text/css'>
+		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+	</head>
+	<body id="body">
+		<div class="container">
+
+			<div class="row">
+				<div id="header" class="col-">High Score - Muttra på!</div>
+			</div>
+
+			<div class="row">
+				<div id="high-score-container" class="col margin-std-bottom">
+					<div class="row">
+						<div class="col">
+						 	<table class="table table-striped">
+							  <thead>
+							    <tr>
+							      <th>#</th>
+							      <th>Namn</th>
+							      <th>Företag</th>
+							      <th>Tid</th>
+							    </tr>
+							  </thead>
+							  <tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="input-container col-sm-12">
+					<div class="row margin-std-bottom">
+						<div class="col">
+							<input id="name" type="text" class="col input-field" placeholder="Namn"/>
+						</div>
+						<div class="col">
+							<input id="company" type="text" class="col input-field" placeholder="Företag"/>
+						</div>
+						<div class="col">
+							<input id="time" type="number" class="col input-field" placeholder="Tid"/>
+						</div>
+					</div>
+					<input id="add" type="button" class="btn btn-outline-success col" value="Lägg till"/>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
